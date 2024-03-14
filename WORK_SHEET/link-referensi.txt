@@ -1,0 +1,7 @@
+1. Setting Node js, NPM, Express js
+    - https://phoenixnap.com/kb/install-node-js-npm-on-windows
+    - https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30
+2. Database integration 
+    - https://expressjs.com/en/guide/database-integration.html#postgresql
+3. Restful Apis in ExpressJs
+    - https://www.tutorialspoint.com/expressjs/expressjs_restful_apis.htm
