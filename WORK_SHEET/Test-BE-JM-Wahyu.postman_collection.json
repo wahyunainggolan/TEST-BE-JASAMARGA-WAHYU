@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "7df37dcb-76e2-4571-862f-d82a64bd570b",
+		"name": "Test-BE-JM-Wahyu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7223097"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee\": {\r\n        \"nik\": \"11014\",\r\n        \"name\": \"Alucard\",\r\n        \"startDate\": \"2024-02-13\",\r\n        \"endDate\": \"2034-02-13\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create employee data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee\": {\r\n        \"nik\": \"110015\",\r\n        \"name\": \"Shafwansyah\",\r\n        \"startDate\": \"2024-02-13\",\r\n        \"endDate\": \"2034-02-13\",\r\n        \"profile\": {\r\n            \"placeOfBirth\": \"Makassar\",\r\n            \"dateOfBirth\": \"2000-05-25\",\r\n            \"gender\": \"Laki-Laki\",\r\n            \"isMarried\": true,\r\n            \"profPict\": null\r\n        },\r\n        \"family\": [\r\n            {\r\n                \"name\": \"Balmond\",\r\n                \"identifier\": \"73100001\",\r\n                \"placeOfBirth\": \"Makassar\",\r\n                \"dateOfBirth\": \"2007-05-25\",\r\n                \"religion\": \"Islam\",\r\n                \"isLife\": true,\r\n                \"isDivorced\": false,\r\n                \"relationStatus\": \"Anak\"\r\n            },\r\n            {\r\n                \"name\": \"Cici\",\r\n                \"identifier\": \"73100002\",\r\n                \"placeOfBirth\": \"Makassar\",\r\n                \"dateOfBirth\": \"1996-05-25\",\r\n                \"religion\": \"Islam\",\r\n                \"isLife\": true,\r\n                \"isDivorced\": false,\r\n                \"relationStatus\": \"Istri\"\r\n            }\r\n        ],\r\n        \"education\": [\r\n            {\r\n                \"name\": \"SMPN 2 Pangkajane\",\r\n                \"level\": \"Smp\",\r\n                \"description\": \"Sekolah Menengah Pertama\"\r\n            },\r\n            {\r\n                \"name\": \"Pondok Modern Darussalam Gontor\",\r\n                \"level\": \"Sma\",\r\n                \"description\": \"Pondok Pesantren\"\r\n            },\r\n            {\r\n                \"name\": \"Universitas Darussalam Gontor\",\r\n                \"level\": \"Strata 1\",\r\n                \"description\": \"Sarjana Komputer\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/all-data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"all-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update employee data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee\": {\r\n        \"name\": \"Shafwansyah Ahmad\",\r\n        \"isActive\": true,\r\n        \"profile\": {\r\n            \"id\": 3,\r\n            \"profPict\": \"https://media.licdn.com/dms/image/D5603AQGX9wzm4mzF8w/profile-displayphoto-shrink_100_100/0/1682302879711?e=1715817600&v=beta&t=3iLLTZ7hRSi2bULhpRrMbQxRKAquM4mQ3FpmwhDN9Yw\"\r\n        },\r\n        \"family\": [\r\n            {\r\n                \"id\": 6,\r\n                \"isLife\": false\r\n            }\r\n        ],\r\n        \"education\": [\r\n            {\r\n                \"id\": 10,\r\n                \"name\": \"SMPN 1 Pangkajane\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/all-data/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"all-data",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee\": {\r\n        \"nik\": \"11010\",\r\n        \"name\": \"Ahmad Shafwansyah\",\r\n        \"startDate\": \"2024-02-13\",\r\n        \"endDate\": \"2034-02-13\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all employees report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/get-reports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"get-reports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-profile/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-profile",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-profile/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-profile",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"profile\": {\r\n        \"dateOfBirth\": \"2000-05-25\",\r\n        \"employeeId\": 4,\r\n        \"placeOfBirth\": \"Makassar\",\r\n        \"gender\": \"Laki-Laki\",\r\n        \"isMarried\": true,\r\n        \"profPict\": \"https://media.licdn.com/dms/image/D5603AQGX9wzm4mzF8w/profile-displayphoto-shrink_100_100/0/1682302879711?e=1715817600&v=beta&t=3iLLTZ7hRSi2bULhpRrMbQxRKAquM4mQ3FpmwhDN9Yw\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"profile\": {\r\n        // \"dateOfBirth\": \"1980-04-2\",\r\n        // \"placeOfBirth\": \"Jakarta\",\r\n        // \"gender\": \"Laki-Laki\",\r\n        // \"isMarried\": true,\r\n        \"profPict\": \"https://media.licdn.com/dms/image/D5603AQGX9wzm4mzF8w/profile-displayphoto-shrink_100_100/0/1682302879711?e=1715817600&v=beta&t=3iLLTZ7hRSi2bULhpRrMbQxRKAquM4mQ3FpmwhDN9Yw\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee-profile/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-profile",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "education",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-education/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-education",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-education/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-education",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": 3,\r\n    \"education\": [\r\n            {\r\n                \"name\": \"SMAN 2 Pangkajene\",\r\n                \"level\": \"Sma\",\r\n                \"description\": \"Sekolah Menengah Akhir\"\r\n            }\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee-education",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"education\": {\r\n        \"name\": \"SD 28 Tumampua III\",\r\n        \"description\": \"Sekolah Dasar\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee-education/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-education",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-education",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-education"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "family",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-family/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-family",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-family/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-family",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": 3,\r\n    \"family\": [\r\n            {\r\n                \"name\": \"Balmond\",\r\n                \"identifier\": \"73100001\",\r\n                \"placeOfBirth\": \"Makassar\",\r\n                \"dateOfBirth\": \"2007-05-25\",\r\n                \"religion\": \"Islam\",\r\n                \"isLife\": true,\r\n                \"isDivorced\": false,\r\n                \"relationStatus\": \"Anak\"\r\n            },\r\n            {\r\n                \"name\": \"Cici\",\r\n                \"identifier\": \"73100002\",\r\n                \"placeOfBirth\": \"Makassar\",\r\n                \"dateOfBirth\": \"1996-05-25\",\r\n                \"religion\": \"Islam\",\r\n                \"isLife\": true,\r\n                \"isDivorced\": false,\r\n                \"relationStatus\": \"Istri\"\r\n            }\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee-family",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-family"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"family\": {\r\n        \"name\": \"Balmond\",\r\n        \"identifier\": \"73100001\",\r\n        \"placeOfBirth\": \"Jakarta\",\r\n        \"dateOfBirth\": \"2007-05-25\",\r\n        \"religion\": \"Islam\",\r\n        \"isLife\": false\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/employee-family/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-family",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee-family",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee-family"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
